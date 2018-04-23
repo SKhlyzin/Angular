@@ -40,3 +40,16 @@ ob.reduce((prev, cur, i) => i%2  && prev + cur || prev, 0);
 function calc(str) {
     return /^(?:\d+([*+-]|\/(?!0)))+\d+$/.test(str) ? eval(str): false;
 }
+/*6*/
+function makeCounter() {
+  var currentCount = 1;
+
+  return function() {
+    return currentCount++;
+  };
+}
+
+var counter = makeCounter();
+console.log(counter());
+console.log(counter());
+console.log(counter());
