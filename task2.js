@@ -12,6 +12,25 @@ console.log(counter());
 console.log(counter());
 console.log(counter());
 
+/*6*/
+var sequence = function(start, step){
+ var generation = function(){
+  if(start==undefined){
+   start = 0;
+   start = start;
+  }
+  else if(step == undefined){
+   step = 1;
+   start = start + step;
+  }
+  else{
+   start+=1;
+  }
+  return start;
+ }
+ return generation;
+}
+
 /*7*/
 var take = function(fn, count){
  var arr = [];
