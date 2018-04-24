@@ -1,34 +1,11 @@
 /*6*/
-function makeCounter() {
-  var currentCount = 1;
-
+function sequence(start = 0, step = 1) {
+  let callNumber = start;
   return function() {
-    return currentCount++;
-  };
-}
-
-var counter = makeCounter();
-console.log(counter());
-console.log(counter());
-console.log(counter());
-
-/*6*/
-var sequence = function(start, step){
- var generation = function(){
-  if(start==undefined){
-   start = 0;
-   start = start;
+    var returnValue = callNumber; // значение для вывода
+    callNumber += step; // готовимся к следующему шагу
+    return returnValue;
   }
-  else if(step == undefined){
-   step = 1;
-   start = start + step;
-  }
-  else{
-   start+=1;
-  }
-  return start;
- }
- return generation;
 }
 
 /*7*/
