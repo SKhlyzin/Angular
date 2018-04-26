@@ -2,8 +2,8 @@
 function sequence(start = 0, step = 1) {
   let callNumber = start;
   return function() {
-    var returnValue = callNumber; // значение для вывода
-    callNumber += step; // готовимся к следующему шагу
+    var returnValue = callNumber; 
+    callNumber += step; 
     return returnValue;
   }
 }
@@ -34,7 +34,6 @@ function imgExists(url, callback) {
     };
 
     img.src = url;
-    //alert('setting src..');
 }
 
 function checkImage(exists) {
